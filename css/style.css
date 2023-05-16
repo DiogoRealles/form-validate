@@ -1,0 +1,116 @@
+:root{
+  --light: #fff;
+  --dark: #000;
+  --error: #aa1515;
+  --success: #30aa15;
+  --ash: #eee;
+  --grey: #ccc;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+}
+::selection{
+  color: var(--light);
+  background: var(--dark);
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  background: linear-gradient(357deg, #0b121d, rgba(11, 18, 29, 0.97) 42%, rgba(27, 34, 46, 0.67) 81%, rgba(27, 34, 46, 0)), url("../img/bg.jpg") no-repeat center/cover;
+}
+.container{
+  width: min(80%, 1400px);
+  margin: 0 auto;
+  /* background: var(--light); */
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, .4); */
+  border-radius: 0 0 4px 4px;
+}
+.header{
+  padding: 20px 0;
+}
+.header__title{
+  text-align: center;
+}
+.form{
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto;
+  color: var(--light);
+}
+.form__header{
+  padding: 20px 0;
+}
+.header__title{
+  text-align: center;
+  color: var(--light);
+}
+.form-control{
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+.form-control label{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.form-control input{
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border: 1px solid var(--ash);
+  border-radius: 4px;
+}
+.form-control input:focus{
+  box-shadow: 0;
+  border: 1px solid var(--grey);
+  outline: 1px solid var(--grey);
+}
+.form-control.success input{
+  border: 1px solid var(--success);
+}
+.form-control.success i.bi-check-circle{
+  visibility: visible;
+  color: var(--success);
+}
+.form-control.error input{
+  border: 1px solid var(--error);
+}
+.form-control.error i.bi-exclamation-circle{
+  visibility: visible;
+  color: var(--error);
+}
+.form-control.error small{
+  visibility: visible;
+  color: var(--error);
+}
+.form-control i{
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  visibility: hidden;
+}
+.form-control small{
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.form .btn{
+  color: var(--light);
+  background: var(--success);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  opacity: .8;
+  width: 100%;
+}
+.form .btn:hover{
+  opacity: 1;
+}
